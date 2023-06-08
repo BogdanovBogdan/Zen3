@@ -1,10 +1,11 @@
-import MainBlock from 'components/MainBlock'
+import Home from 'pages/home'
 import Root from 'components/Root'
 
 export default function () {
   return (
     <Root>
-      <MainBlock />
+      {/* <MainBlock /> */}
+      <Home />
     </Root>
   )
 }
