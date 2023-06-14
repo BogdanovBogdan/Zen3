@@ -22,6 +22,7 @@ module.exports = {
         chart: '108px',
         time: '95px',
         glass: '107px',
+        '176': '44rem',
       },
     },
     container: {
