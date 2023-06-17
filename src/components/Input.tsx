@@ -30,6 +30,17 @@ export default function Input() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [value, setValue] = useState('')
 
+  // todo: change to classNames
+  useEffect(() => {
+    const filledClass = 'input-filled'
+
+    if (value.length) {
+      inputRef.current?.classList.add(filledClass)
+    } else {
+      inputRef.current?.classList.remove(filledClass)
+    }
+  }, [value])
+
   const onChange = (event: TargetedEvent<HTMLInputElement>) => {
     const value = event?.currentTarget?.value
     filterDB(value)
