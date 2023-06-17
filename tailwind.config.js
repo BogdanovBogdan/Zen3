@@ -3,6 +3,9 @@ module.exports = {
   content: ['./index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
     extend: {
+      fontSize: {
+        '0': '0px',
+      },
       colors: {
         black: {
           background: '#040404',
