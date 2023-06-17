@@ -1,4 +1,4 @@
-import { TargetedEvent, useEffect, useRef, useState } from 'preact/compat'
+import { TargetedEvent, useRef, useState } from 'preact/compat'
 import DBStore from 'stores/DBStore'
 import classnames, {
   borderRadius,
@@ -30,17 +30,6 @@ export default function Input() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [value, setValue] = useState('')
 
-  // todo: change to classNames
-  useEffect(() => {
-    const filledClass = 'input-filled'
-
-    if (value.length) {
-      inputRef.current?.classList.add(filledClass)
-    } else {
-      inputRef.current?.classList.remove(filledClass)
-    }
-  }, [value])
-
   const onChange = (event: TargetedEvent<HTMLInputElement>) => {
     const value = event?.currentTarget?.value
     filterDB(value)
@@ -48,8 +37,6 @@ export default function Input() {
   }
 
   const onReset = () => {
-    console.log('reset')
-
     setValue('')
     if (inputRef.current) {
       inputRef.current.focus()
