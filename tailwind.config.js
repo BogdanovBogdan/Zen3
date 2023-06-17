@@ -7,6 +7,9 @@ module.exports = {
         '0': '0px',
       },
       colors: {
+        gray: {
+          '100': 'rgba(245, 245, 247, 1)'
+        },
         black: {
           background: '#040404',
           'background-purpose': '#12141D',
