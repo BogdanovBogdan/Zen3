@@ -6,6 +6,7 @@ const popularDappsNames = [
   'Stargate',
   'WOOFi Swap',
   '1inch Network',
+  'SushiSwap',
 ]
 
 const popularDapps = database.protocols.filter(({ name }) =>
