@@ -32,6 +32,7 @@ export default function Input() {
 
   const onReset = () => {
     setValue('')
+    filterDB('')
     if (inputRef.current) {
       inputRef.current.focus()
     }
