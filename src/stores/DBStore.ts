@@ -19,9 +19,7 @@ const state = proxy({
 })
 
 export const filterDB = (searchableName: string) => {
-  console.log({ searchableName })
-
-  if (searchableName.length) {
+  if (searchableName?.length) {
     state.filtered = state.database.protocols.filter(({ name }) =>
       name.toLowerCase().startsWith(searchableName.toLowerCase())
     )
