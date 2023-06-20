@@ -13,9 +13,21 @@ const popularDapps = database.protocols.filter(({ name }) =>
   popularDappsNames.includes(name)
 )
 
-const dbStore = proxy({
+const state = proxy({
   database,
   filtered: popularDapps,
 })
 
-export default proxy(dbStore)
+export const filterDB = (searchableName: string) => {
+  console.log({ searchableName })
+
+  if (searchableName.length) {
+    state.filtered = state.database.protocols.filter(({ name }) =>
+      name.toLowerCase().startsWith(searchableName.toLowerCase())
+    )
+  } else {
+    state.filtered = popularDapps
+  }
+}
+
+export default state

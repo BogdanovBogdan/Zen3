@@ -1,5 +1,5 @@
 import { TargetedEvent, useRef, useState } from 'preact/compat'
-import DBStore from 'stores/DBStore'
+import { filterDB } from 'stores/DBStore'
 import classnames, {
   borderRadius,
   cursor,
@@ -9,12 +9,6 @@ import classnames, {
   padding,
   width,
 } from 'classnames/tailwind'
-
-function filterDB(searchName: string) {
-  DBStore.filtered = DBStore.database.protocols.filter(({ name }) =>
-    name.startsWith(searchName)
-  )
-}
 
 const input = classnames(
   cursor('cursor-pointer'),
