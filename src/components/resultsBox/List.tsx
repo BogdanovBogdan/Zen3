@@ -63,7 +63,7 @@ const url = classnames(
 
 export default function List({ list }: List) {
   return (
-    <ul className="w-full">
+    <ul className="w-full h-full overflow-y-auto">
       {list.map((protocol) => (
         <li className={listItem}>
           <img className={listImg} src={protocol.logo} alt={protocol.name} />

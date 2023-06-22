@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        '0': '0px',
+        0: '0px',
       },
       colors: {
         gray: {
-          '100': 'rgba(245, 245, 247, 1)'
+          100: 'rgba(245, 245, 247, 1)',
         },
         black: {
           background: '#040404',
@@ -28,7 +28,10 @@ module.exports = {
         chart: '108px',
         time: '95px',
         glass: '107px',
-        '176': '44rem',
+        176: '44rem',
+      },
+      maxHeight: {
+        98: '24.5rem',
       },
     },
     container: {
