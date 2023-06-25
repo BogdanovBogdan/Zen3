@@ -1,5 +1,11 @@
+import { Protocol } from 'types'
 import { proxy } from 'valtio'
 import database from 'data/protocols2.json'
+
+interface State {
+  database: { protocols: Protocol[] }
+  filtered: Protocol[]
+}
 
 const popularDappsNames = [
   'Uniswap V3',
@@ -13,7 +19,7 @@ const popularDapps = database.protocols.filter(({ name }) =>
   popularDappsNames.includes(name)
 )
 
-const state = proxy({
+const state = proxy<State>({
   database,
   filtered: popularDapps,
 })

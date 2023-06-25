@@ -18,7 +18,7 @@ import classnames, {
 } from 'classnames/tailwind'
 
 type List = {
-  list: Protocol[]
+  list: readonly Protocol[]
 }
 
 const listItem = classnames(

@@ -16,4 +16,5 @@ export default defineConfig({
     },
     outDir: 'docs',
   },
+  base: '/Zen3/',
 })
