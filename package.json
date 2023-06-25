@@ -11,7 +11,7 @@
     "generate-css-types": "tailwindcss-classnames -i tailwind.config.js -o src/classnames/tailwind.ts && prettier --write src/classnames/tailwind.ts",
     "preview": "yarn build && yarn vite preview",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d docs"
   },
   "browserslist": {
     "production": [
