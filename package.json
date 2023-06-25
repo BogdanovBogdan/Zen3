@@ -8,9 +8,7 @@
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
     "generate-css-types": "tailwindcss-classnames -i tailwind.config.js -o src/classnames/tailwind.ts && prettier --write src/classnames/tailwind.ts",
-    "preview": "yarn build && yarn vite preview",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d docs"
+    "preview": "yarn build && yarn vite preview"
   },
   "browserslist": {
     "production": [
@@ -45,7 +43,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "eslint-plugin-valtio": "^0.6.2",
-    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "react-scripts": "^5.0.1",
