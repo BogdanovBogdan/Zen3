@@ -22,7 +22,7 @@ This template is to be used for frontend applications.
 
 ## Available Scripts
 
-- `yarn build` — builds the app for production to the `docs` folder
+- `yarn build` — builds the app for production to the `build` folder
 - `yarn lint` — checks if the code is linted and formatted
 - `yarn start` — runs the app in the development mode
 - `yarn generate-css-types` — generates the CSS types for `tailwind-css`

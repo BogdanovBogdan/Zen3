@@ -14,7 +14,7 @@ export default defineConfig({
         }) as Plugin,
       ],
     },
-    outDir: 'docs',
+    outDir: 'build',
   },
-  base: 'Zen3',
+  base: '/Zen3/',
 })
