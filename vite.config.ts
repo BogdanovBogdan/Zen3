@@ -16,5 +16,5 @@ export default defineConfig({
     },
     outDir: 'docs',
   },
-  base: '/Zen3/',
+  base: '/vite-deploy-demo/',
 })
