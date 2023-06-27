@@ -16,5 +16,4 @@ export default defineConfig({
     },
     outDir: 'build',
   },
-  base: '/Zen3/',
 })
