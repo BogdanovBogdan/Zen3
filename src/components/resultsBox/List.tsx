@@ -61,6 +61,10 @@ const url = classnames(
   overflow('overflow-hidden')
 )
 
+const formatURL = (url: string) => {
+  return url.split('://')[1].split('/')[0]
+}
+
 export default function List({ list }: List) {
   return (
     <ul className="w-full h-full overflow-y-auto">
@@ -89,7 +93,7 @@ export default function List({ list }: List) {
               />
             </svg>
             <span className="overflow-hidden overflow-ellipsis">
-              {protocol.url.split('://')[1]}
+              {formatURL(protocol.url)}
             </span>
           </span>
         </li>
