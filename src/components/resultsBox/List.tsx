@@ -9,10 +9,12 @@ import classnames, {
   gap,
   gridAutoFlow,
   gridColumn,
+  group,
   height,
   overflow,
   padding,
   position,
+  visibility,
   whitespace,
   width,
 } from 'classnames/tailwind'
@@ -32,7 +34,8 @@ const listItem = classnames(
   borderRadius('rounded-2xl'),
   backgroundColor('hover:bg-slate-100'),
   width('w-full'),
-  gridColumn('grid-cols-[32px_minmax(50%,_1fr)_auto]' as TTailwindString)
+  gridColumn('grid-cols-[32px_minmax(50%,_1fr)_auto]' as TTailwindString),
+  group('group')
 )
 
 const listImg = classnames(
@@ -50,7 +53,8 @@ const meta = classnames(
   width('w-full'),
   gap('gap-2'),
   whitespace('whitespace-nowrap'),
-  overflow('overflow-hidden')
+  overflow('overflow-hidden'),
+  visibility('invisible', 'group-hover:visible')
 )
 
 const url = classnames(
