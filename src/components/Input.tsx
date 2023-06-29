@@ -5,24 +5,40 @@ import classnames, {
   cursor,
   fontSize,
   height,
+  inset,
   outlineWidth,
   padding,
+  peer,
+  position,
+  translate,
+  visibility,
   width,
 } from 'classnames/tailwind'
 
-const input = classnames(
-  cursor('cursor-pointer'),
-  width('w-176'),
-  height('h-14'),
-  padding('py-3', 'px-14'),
-  borderRadius('rounded-2xl'),
-  fontSize('text-lg'),
-  outlineWidth('focus-visible:outline-0')
+const resetButton = classnames(
+  position('absolute'),
+  translate('-translate-y-1/2'),
+  inset('top-1/2', 'right-5'),
+  visibility('invisible', 'peer-[.is-filled]:visible')
 )
 
 export default function Input() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [value, setValue] = useState('')
+
+  const cnInput = classnames(
+    cursor('cursor-pointer'),
+    width('w-176'),
+    height('h-14'),
+    padding('py-3', 'px-14'),
+    borderRadius('rounded-2xl'),
+    fontSize('text-lg'),
+    outlineWidth('focus-visible:outline-0'),
+    peer('peer'),
+    {
+      ['is-filled']: inputRef?.current?.value,
+    }
+  )
 
   const onChange = (event: TargetedEvent<HTMLInputElement>) => {
     const value = event?.currentTarget?.value
@@ -41,7 +57,7 @@ export default function Input() {
   return (
     <span className="relative">
       <input
-        className={input}
+        className={cnInput}
         ref={inputRef}
         type="text"
         // todo: do by js, because safari on IOS doesn't support authofocus
@@ -64,11 +80,7 @@ export default function Input() {
           d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
         />
       </svg>
-      <button
-        type="button"
-        className="absolute top-1/2 right-5 -translate-y-1/2"
-        onClick={onReset}
-      >
+      <button type="button" className={resetButton} onClick={onReset}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
