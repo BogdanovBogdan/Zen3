@@ -17,8 +17,12 @@ import classnames, {
 
 const resetButton = classnames(
   position('absolute'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   translate('-translate-y-1/2'),
   inset('top-1/2', 'right-5'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   visibility('invisible', 'peer-[.is-filled]:visible')
 )
 
@@ -39,6 +43,8 @@ export default function Input() {
     fontSize('text-lg'),
     outlineWidth('focus-visible:outline-0'),
     peer('peer'),
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     {
       ['is-filled']: inputRef?.current?.value,
     }
