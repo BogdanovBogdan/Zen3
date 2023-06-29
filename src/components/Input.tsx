@@ -1,4 +1,4 @@
-import { TargetedEvent, useRef, useState } from 'preact/compat'
+import { TargetedEvent, useEffect, useRef, useState } from 'preact/compat'
 import { filterDB } from 'stores/DBStore'
 import classnames, {
   borderRadius,
@@ -25,6 +25,10 @@ const resetButton = classnames(
 export default function Input() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [value, setValue] = useState('')
+
+  useEffect(() => {
+    inputRef?.current?.focus()
+  }, [])
 
   const cnInput = classnames(
     cursor('cursor-pointer'),
@@ -60,8 +64,6 @@ export default function Input() {
         className={cnInput}
         ref={inputRef}
         type="text"
-        // todo: do by js, because safari on IOS doesn't support authofocus
-        autofocus
         onChange={onChange}
         placeholder="  Search"
         value={value}
