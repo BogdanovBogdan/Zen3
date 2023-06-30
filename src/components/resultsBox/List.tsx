@@ -78,7 +78,7 @@ export default function List({ list }: List) {
           <span className="overflow-hidden whitespace-nowrap text-ellipsis">
             {protocol.name}
           </span>
-          <a href={protocol.url} className={url}>
+          <a href={protocol.url} className={url} target="_blank">
             link to protocol
           </a>
           <span className={meta}>
