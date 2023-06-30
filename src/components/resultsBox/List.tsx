@@ -34,7 +34,7 @@ const listItem = classnames(
   height('h-12'),
   padding('px-3', 'py-2'),
   borderRadius('rounded-2xl'),
-  backgroundColor('hover:bg-slate-100'),
+  backgroundColor('hover:bg-white-200'),
   width('w-full'),
   gridColumn('grid-cols-[32px_minmax(50%,_1fr)_auto]' as TTailwindString),
   group('group')
@@ -44,7 +44,7 @@ const listImg = classnames(
   height('h-8'),
   width('w-8'),
   borderRadius('rounded-full'),
-  borderColor('border-gray-light'),
+  borderColor('border-white-400'),
   borderWidth('border')
 )
 
@@ -52,7 +52,7 @@ const meta = classnames(
   display('flex'),
   alignItems('items-center'),
   padding('px-3', 'py-1'),
-  backgroundColor('bg-white'),
+  backgroundColor('bg-white-100'),
   borderRadius('rounded-full'),
   width('w-full'),
   gap('gap-2'),

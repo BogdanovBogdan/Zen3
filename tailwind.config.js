@@ -7,28 +7,19 @@ module.exports = {
         0: '0px',
       },
       colors: {
-        gray: {
-          100: 'rgba(245, 245, 247, 1)',
-          light: '#e6e7e9',
+        'light-primary': '#16161A',
+        'light-secondary': '#3C3C43A6',
+        white: {
+          100: '#FFFFFF',
+          200: '#F5F5F7',
+          300: '#EEEEEE',
+          400: '#E6E7E9',
         },
-        black: {
-          background: '#040404',
-          'background-purpose': '#12141D',
-          'perk-gradient-light': 'rgba(4, 6, 14, 0.9)',
-          'perk-gradient-dark': '#04060E',
+        icon: {
+          secondary: '#868990',
         },
-        gold: {
-          dark: '#FA6641',
-          light: '#EAE100',
-        },
-      },
-      borderRadius: {
-        avatar: '6rem',
       },
       width: {
-        chart: '108px',
-        time: '95px',
-        glass: '107px',
         176: '44rem',
       },
       maxHeight: {

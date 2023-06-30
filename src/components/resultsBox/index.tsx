@@ -23,7 +23,7 @@ const container = classnames(
   flexDirection('flex-col'),
   width('w-176'),
   maxHeight('max-h-98'),
-  backgroundColor('bg-white'),
+  backgroundColor('bg-white-100'),
   borderRadius('rounded-2xl'),
   margin('m-2'),
   gap('gap-4'),
