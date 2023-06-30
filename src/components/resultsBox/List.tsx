@@ -16,6 +16,7 @@ import classnames, {
   overflow,
   padding,
   position,
+  textColor,
   visibility,
   whitespace,
   width,
@@ -35,6 +36,7 @@ const listItem = classnames(
   padding('px-3', 'py-2'),
   borderRadius('rounded-2xl'),
   backgroundColor('hover:bg-white-200'),
+  textColor('text-light-primary'),
   width('w-full'),
   gridColumn('grid-cols-[32px_minmax(50%,_1fr)_auto]' as TTailwindString),
   group('group')
@@ -54,6 +56,8 @@ const meta = classnames(
   padding('px-3', 'py-1'),
   backgroundColor('bg-white-100'),
   borderRadius('rounded-full'),
+  borderWidth('border'),
+  borderColor('border-white-400'),
   width('w-full'),
   gap('gap-2'),
   whitespace('whitespace-nowrap'),
@@ -91,8 +95,7 @@ export default function List({ list }: List) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke="currentColor"
-              class="w-5 h-5 min-w-[20px]"
+              class="w-5 h-5 min-w-[20px] stroke-light-primary"
             >
               <path
                 stroke-linecap="round"

@@ -2,6 +2,7 @@ import { TargetedEvent, useEffect, useRef, useState } from 'preact/compat'
 import { filterDB } from 'stores/DBStore'
 import classnames, {
   borderRadius,
+  caretColor,
   cursor,
   fontSize,
   height,
@@ -9,7 +10,9 @@ import classnames, {
   outlineWidth,
   padding,
   peer,
+  placeholderColor,
   position,
+  textColor,
   translate,
   visibility,
   width,
@@ -42,6 +45,9 @@ export default function Input() {
     borderRadius('rounded-2xl'),
     fontSize('text-lg'),
     outlineWidth('focus-visible:outline-0'),
+    textColor('text-light-primary'),
+    placeholderColor('placeholder-light-secondary'),
+    caretColor('caret-black'),
     peer('peer'),
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -65,7 +71,7 @@ export default function Input() {
   }
 
   return (
-    <span className="relative">
+    <div className="relative">
       <input
         className={cnInput}
         ref={inputRef}
@@ -80,7 +86,7 @@ export default function Input() {
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="absolute top-1/2 left-5 -translate-y-1/2 w-5 h-5"
+        class="absolute top-1/2 left-5 -translate-y-1/2 w-5 h-5 stroke-icon-secondary"
       >
         <path
           stroke-linecap="round"
@@ -95,7 +101,7 @@ export default function Input() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          class="w-5 h-5 pointer-events-none"
+          class="w-5 h-5 pointer-events-none stroke-icon-secondary"
         >
           <path
             strokeLinecap="round"
@@ -104,6 +110,6 @@ export default function Input() {
           />
         </svg>
       </button>
-    </span>
+    </div>
   )
 }
