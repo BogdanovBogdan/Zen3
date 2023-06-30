@@ -3,7 +3,9 @@ import classnames, {
   TTailwindString,
   alignItems,
   backgroundColor,
+  borderColor,
   borderRadius,
+  borderWidth,
   display,
   fontSize,
   gap,
@@ -41,7 +43,9 @@ const listItem = classnames(
 const listImg = classnames(
   height('h-8'),
   width('w-8'),
-  borderRadius('rounded-full')
+  borderRadius('rounded-full'),
+  borderColor('border-gray-light'),
+  borderWidth('border')
 )
 
 const meta = classnames(
