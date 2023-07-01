@@ -13,6 +13,7 @@ import classnames, {
   gridColumn,
   group,
   height,
+  outlineWidth,
   overflow,
   padding,
   position,
@@ -70,6 +71,7 @@ const url = classnames(
   width('w-full'),
   height('h-full'),
   fontSize('text-0'),
+  outlineWidth('outline-0'),
   overflow('overflow-hidden')
 )
 
