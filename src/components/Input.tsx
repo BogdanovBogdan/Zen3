@@ -52,7 +52,7 @@ export default function Input() {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     {
-      ['is-filled']: inputRef?.current?.value,
+      ['is-filled']: value,
     }
   )
 
