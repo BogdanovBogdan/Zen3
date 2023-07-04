@@ -26,18 +26,18 @@ const container = classnames(
   backgroundColor('bg-white-100'),
   borderRadius('rounded-2xl'),
   margin('m-2'),
-  gap('gap-4'),
+  gap('gap-3'),
   alignItems('items-center'),
   overflow('overflow-hidden'),
   padding('p-6')
 )
 
 export default function ResultsBox() {
-  const { filtered } = useSnapshot(DBStore)
+  const { filtered, label } = useSnapshot(DBStore)
 
   return (
     <div className={container}>
-      {filtered.length ? <List list={filtered} /> : <NotFound />}
+      {filtered.length ? <List list={filtered} label={label} /> : <NotFound />}
     </div>
   )
 }
