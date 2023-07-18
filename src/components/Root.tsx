@@ -18,7 +18,7 @@ const root = classnames(
   margin('mx-auto'),
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  padding('pt-[25%]', 'pb-10', 'py-4'),
+  padding('pt-[20%]', 'pb-10', 'py-4'),
   maxWidth('max-w-4xl')
 )
 export default function ({ children }: ChildrenProp) {
