@@ -16,6 +16,8 @@ const root = classnames(
   flexDirection('flex-col'),
   container('container'),
   margin('mx-auto'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   padding('pt-[25%]', 'pb-10', 'py-4'),
   maxWidth('max-w-4xl')
 )
